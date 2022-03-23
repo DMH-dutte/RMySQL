@@ -1,11 +1,3 @@
-#http://adv-r.had.co.nz/OO-essentials.html
-#system2(command="python3", args=c('/home/sunam188/python_classes/easymysql.py', '"select * from proteins;"', 'kes2021', 'tmp.csv'), stdout  = TRUE)
-#read.csv('tmp.csv', header=TRUE, sep='\t')
-#http://adv-r.had.co.nz/OO-essentials.html
-#system2(command="python3", args=c('/home/sunam188/python_classes/easymysql.py', '"select * from proteins;"', 'kes2021', 'tmp.csv'), stdout  = TRUE)
-#read.csv('tmp.csv', header=TRUE, sep='\t')
-
-
 #' @export
 to_df = function() {
     # Change to data.table::fread() -> reads in tables much faster
@@ -21,7 +13,7 @@ rm_tmp = function() {
     system(exec)
 }
 
-#Class definition
+# Class definition
 #' @export
 DB = setClass("DB", 
               contains = "character", 
@@ -30,7 +22,7 @@ DB = setClass("DB",
                       password='character')
              )
 
-#Generic from scratch
+# Generic from scratch
 #' @export
 setGeneric("sql_query", function(object, query) {
   standardGeneric("sql_query")
@@ -53,11 +45,7 @@ setMethod("sql_query",
   }
 )
 
-# Example of class usage
-#kes2021 = DB(user='gmg', database= 'kes2021', password='')
-#sql_query(kes2021, 'select * from contigs limit 10;')
-
-# Maintain this function for own purposes
+# Maintain this function for already written scripts 
 #' @export
 mysql_exec = function(user, query, DB) {
     exec = paste0('mysql -u ', user, ' -D ', DB, ' -e ', "'", query, "'", ' > .tmp.csv')
