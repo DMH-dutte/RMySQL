@@ -18,7 +18,7 @@ rm_tmp = function() {
 #' @param password Password to access the database
 #' @keywords SQL MySQL Command Line
 #' @examples
-#' DB()
+#' DB(user='character', database='character', password='character')
 #' @export
 DB = setClass("DB", 
               contains = "character", 
@@ -43,7 +43,7 @@ setGeneric("sql_query", function(object, query) {
 #' @keywords SQL MySQL Command Line
 #' @return A dataframe of the SQL query
 #' @examples
-#' sql_query()
+#' sql_query(object=DB(example_object), query = 'character')
 #' @export
 setMethod("sql_query",
   c(object = "DB", query = "character"),

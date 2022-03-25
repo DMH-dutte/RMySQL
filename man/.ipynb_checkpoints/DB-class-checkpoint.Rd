@@ -16,7 +16,7 @@
 Class object containing username, database and password for an MySQL query.
 }
 \examples{
-DB(user='character', database='character', password='character')
+DB()
 }
 \keyword{Command}
 \keyword{Line}

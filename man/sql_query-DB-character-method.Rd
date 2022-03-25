@@ -19,7 +19,7 @@ This function executes an defined SQL query and executes it on the command line.
 The query is returned as a dataframe.
 }
 \examples{
-sql_query()
+sql_query(object=DB(example_object), query = 'character')
 }
 \keyword{Command}
 \keyword{Line}
