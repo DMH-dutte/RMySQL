@@ -1,4 +1,3 @@
-#' @export
 to_df = function() {
     # Change to data.table::fread() -> reads in tables much faster
     df = data.table::fread('tmp.csv', sep='\t')
@@ -6,14 +5,20 @@ to_df = function() {
     return(df)
 }
 
-#' @export
 rm_tmp = function() {
     exec = paste0('rm tmp.csv')
     #print(exec)
     system(exec)
 }
 
-# Class definition
+#' Class object containing username, database and password for an MySQL query.
+#'
+#' @param user Username for MySQL accession
+#' @param database Database name which should be called in MySQL
+#' @param password Password to access the database
+#' @keywords SQL MySQL Command Line
+#' @examples
+#' DB()
 #' @export
 DB = setClass("DB", 
               contains = "character", 
@@ -22,13 +27,23 @@ DB = setClass("DB",
                       password='character')
              )
 
+
 # Generic from scratch
-#' @export
 setGeneric("sql_query", function(object, query) {
   standardGeneric("sql_query")
 })
 
-#Method definition
+
+#' Executes an MySQL query on the command line
+#'
+#' This function executes an defined SQL query and executes it on the command line. 
+#' The query is returned as a dataframe. 
+#' @param object A class object containing SQL user, database & password
+#' @param query SQL query in character format
+#' @keywords SQL MySQL Command Line
+#' @return A dataframe of the SQL query
+#' @examples
+#' sql_query()
 #' @export
 setMethod("sql_query",
   c(object = "DB", query = "character"),

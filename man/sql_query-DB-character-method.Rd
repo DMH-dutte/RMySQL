@@ -2,19 +2,26 @@
 % Please edit documentation in R/DB.r
 \name{sql_query,DB,character-method}
 \alias{sql_query,DB,character-method}
-\title{Executes an SQL query on the command line}
+\title{Executes an MySQL query on the command line}
 \usage{
 \S4method{sql_query}{DB,character}(object, query)
 }
 \arguments{
-\item{infile}{Path to the input file}
+\item{object}{A class object containing SQL user, database & password}
+
+\item{query}{SQL query in character format}
 }
 \value{
-A matrix of the infile
+A dataframe of the SQL query
 }
 \description{
-This function executes an defined SQL query on the command line.
-The
-Any rows with duplicated row names will be dropped with the first one being
-kepted.
+This function executes an defined SQL query and executes it on the command line.
+The query is returned as a dataframe.
 }
+\examples{
+sql_query()
+}
+\keyword{Command}
+\keyword{Line}
+\keyword{MySQL}
+\keyword{SQL}
