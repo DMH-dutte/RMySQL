@@ -1,4 +1,4 @@
-# MySQL Communicator - R
+# RMySQL
 
 # Installation:
 
