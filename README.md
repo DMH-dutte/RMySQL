@@ -16,8 +16,16 @@ sql_query(kes2021, 'select * from contigs limit 10;')
 ```
 ![Screenshot](img/example_query.png)
 
+<p align="center">
+  <img src="img/example_query.png">
+</p>
+
 
 ```R
 sql_query(kes2021, 'show processlist;')
 ```
 ![Screenshot](img/example_query2.png)
+
+<p align="center">
+  <img src="img/example_query2.png">
+</p>
