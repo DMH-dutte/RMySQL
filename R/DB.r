@@ -1,3 +1,4 @@
+#' @export
 to_df = function() {
     # Change to data.table::fread() -> reads in tables much faster
     df = data.table::fread('tmp.csv', sep='\t')
@@ -5,6 +6,7 @@ to_df = function() {
     return(df)
 }
 
+#' @export
 rm_tmp = function() {
     exec = paste0('rm tmp.csv')
     #print(exec)
@@ -29,6 +31,7 @@ DB = setClass("DB",
 
 
 # Generic from scratch
+#' @export
 setGeneric("sql_query", function(object, query) {
   standardGeneric("sql_query")
 })
