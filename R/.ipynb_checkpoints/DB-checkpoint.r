@@ -46,8 +46,8 @@ setGeneric("sql_query", function(object, query) {
 #' sql_query(object=DB(example_object), query = 'character')
 #' @export
 setMethod("sql_query",
-  c(object = "DB", query = "character"),
-  function(object, query) {
+  signature=c(object = "DB", query = "character"),
+  definition = function(object, query) {
     complete_query = paste0('mysql -u ', object@user, 
                             ' -p ', object@password,
                             ' -D ', object@database, 
