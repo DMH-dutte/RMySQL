@@ -2,4 +2,7 @@
 
 export(mysql_exec)
 export(rm_tmp)
+export(sql_query)
 export(to_df)
+exportClasses(DB)
+exportMethods(sql_query)
