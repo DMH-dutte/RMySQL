@@ -1,11 +1,11 @@
-# easymysql 
+# MySQL Communicator - R
 
 # Installation:
 
 ```R
 # Development version from GitHub:
 # install.packages("devtools")
-devtools::install_github("https://github.com/DMH-dutte/easymysql")
+devtools::install_github("https://github.com/DMH-dutte/mysql_communicator")
 ```
 
 # Usage:
