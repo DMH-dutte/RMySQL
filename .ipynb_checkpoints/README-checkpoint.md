@@ -14,7 +14,6 @@ devtools::install_github("https://github.com/DMH-dutte/easymysql")
 kes2021 = DB(user='gmg', database= 'kes2021', password='')
 sql_query(kes2021, 'select * from contigs limit 10;')
 ```
-![Screenshot](img/example_query.png)
 
 <p align="center">
   <img src="img/example_query.png">
@@ -24,7 +23,6 @@ sql_query(kes2021, 'select * from contigs limit 10;')
 ```R
 sql_query(kes2021, 'show processlist;')
 ```
-![Screenshot](img/example_query2.png)
 
 <p align="center">
   <img src="img/example_query2.png">
