@@ -56,6 +56,12 @@ setMethod("sql_query",
                             ' -D ', object@database, 
                             ' -e ', "'", query, "'", 
                             ' > tmp.csv')
+    if (object@password == "") {
+        complete_query = paste0('mysql -u ', object@user, 
+                                ' -D ', object@database, 
+                                ' -e ', "'", query, "'", 
+                                ' > tmp.csv')
+    }
     system(complete_query) # Query execution
     df = to_df() # Query into dataframe
     rm_tmp() # Remove temporary file
