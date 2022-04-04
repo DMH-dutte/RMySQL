@@ -5,7 +5,7 @@
 ```R
 # Development version from GitHub:
 # install.packages("devtools")
-devtools::install_github("https://github.com/DMH-dutte/mysql_communicator")
+devtools::install_github("https://github.com/DMH-dutte/RMySQL")
 ```
 
 # Usage:
