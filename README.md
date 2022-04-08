@@ -1,7 +1,7 @@
 # RMySQL
 
 <p align="center">
-    <img src="https://github.com/DMH-dutte/RMySQL/blob/main/img/database.png" width="400" />
+    <img src="https://github.com/DMH-dutte/RMySQL/blob/main/img/database.png" width="200" />
 </p>
 
 # Installation:
