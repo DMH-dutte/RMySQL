@@ -1,7 +1,7 @@
 # RMySQL
 
 <p align="center">
-    <img src="https://github.com/DMH-dutte/Detection_of_composite_transposable_elements/blob/main/preview/frequency_landscape.png" width="400" />
+    <img src="https://github.com/DMH-dutte/RMySQL/blob/main/img/database.png" width="400" />
 </p>
 
 # Installation:
